@@ -9,7 +9,7 @@ This runs the app in the development mode on port 9090.
 # Rest Endpoints for credit card data
 * Get: /cards to get all credit card details in the sytem
 * Post: /cards to add a new card
-* postman collection is attached with shared code packet
+* postman collection is included in this repo
 
 
 # Authentication and Authorization.
@@ -28,6 +28,9 @@ This runs the app in the development mode on port 9090.
 # Steps to enable authentication and authorization for /cards api
 * Go to com.example.cc.auth.config.WebSecurityConfiguration class.
 * Remove "/cards" (line : 37) from AUTH_WHITELIST. Updated AUTH_WHITELIST should look like below. 
+   
+   
+   
    private static final String[] AUTH_WHITELIST = {
             "/v2/api-docs",
             "/swagger-resources",
@@ -36,8 +39,7 @@ This runs the app in the development mode on port 9090.
             "/configuration/security",
             "/swagger-ui.html",
             "/webjars/**",
-            "/h2/**"
-            
+            "/h2/**"        
     };
 * Build and run the application. Follow user flow mentioned above.
 

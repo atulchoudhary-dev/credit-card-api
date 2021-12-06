@@ -1,0 +1,138 @@
+{
+	"info": {
+		"_postman_id": "67bc6223-4d67-4c63-b23e-7ccfe92b3ca4",
+		"name": "credit-card-api-postman",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Get All credit cards",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbiIsImV4cCI6MTYzOTY0OTAzN30._S2-GsFmCN1vYE8V3bzyOqM50ozad5fJvGua-sioWNyuo_7by5gxKw3mbUS_1xbHV0x5ALjRgk3dR87AzhWqtQ",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"url": {
+					"raw": "http://localhost:9090/credit-card-api/v1/cards",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9090",
+					"path": [
+						"credit-card-api",
+						"v1",
+						"cards"
+					]
+				},
+				"description": "Get all credit card details in the system"
+			},
+			"response": []
+		},
+		{
+			"name": "Add a new credit card",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbiIsImV4cCI6MTYzOTY0OTAzN30._S2-GsFmCN1vYE8V3bzyOqM50ozad5fJvGua-sioWNyuo_7by5gxKw3mbUS_1xbHV0x5ALjRgk3dR87AzhWqtQ",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n        \"userName\": \"atul-credit\",\r\n        \"cardNumber\": \"79927398713\",\r\n        \"creditLimit\": \"200.00\"\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9090/credit-card-api/v1/cards",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9090",
+					"path": [
+						"credit-card-api",
+						"v1",
+						"cards"
+					]
+				},
+				"description": "Add a new credit card. This returns an error if card is already existing"
+			},
+			"response": []
+		},
+		{
+			"name": "User signup",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\":\"admin\",\r\n    \"password\":\"admin\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9090/credit-card-api/v1/signup",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9090",
+					"path": [
+						"credit-card-api",
+						"v1",
+						"signup"
+					]
+				},
+				"description": "Singn up a new user. This create a user with a name and encrypted password in the system"
+			},
+			"response": []
+		},
+		{
+			"name": "User login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\":\"admin\",\r\n    \"password\":\"admin\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9090/credit-card-api/v1/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9090",
+					"path": [
+						"credit-card-api",
+						"v1",
+						"login"
+					]
+				},
+				"description": "Login a user. This returns a bearer token in response header."
+			},
+			"response": []
+		}
+	]
+}
